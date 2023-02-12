@@ -3,7 +3,7 @@ const { PORT } = require("./utils/config.js")
 const lg = require("./utils/logger.js") 
 const homeRoutes = require("./routes/home/home.js") 
 
-
+ 
 const app = express()
     .set("view engine", "ejs")
     .use(express.urlencoded({ extended: true }))
