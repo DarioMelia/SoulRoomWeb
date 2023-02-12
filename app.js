@@ -1,7 +1,10 @@
 const express = require("express") 
 const { PORT } = require("./utils/config.js") 
 const lg = require("./utils/logger.js") 
-const homeRoutes = require("./routes/home/home.js") 
+
+const homeRoutes = require("./routes/home/home.js")
+const adminRoutes = require("./routes/admin/admin.js")
+const storeRoutes = require("./routes/store/store.js")
 
  
 const app = express()
@@ -12,6 +15,8 @@ const app = express()
 
 
 app.use("/",homeRoutes)
+app.use("/admin",adminRoutes)
+app.use("/store",storeRoutes)
 try {
 
     app.listen(PORT, err => {

@@ -1,6 +1,6 @@
 const homeGet = async (req,res,next) =>{
     try{
-        res.send("Hello World")
+        res.render("home")
     } catch(err){
         res.send("No Hello World", err)
     }
