@@ -1,0 +1,20 @@
+{
+  "name": "soulroomweb",
+  "version": "1.0.0",
+  "description": "Soul Room studio web page and store",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit",
+    "start:test": "cross-env NODE_ENV=test node app.js"
+  },
+  "author": "Dario Melia Basus & Sara Alvarez Corral",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
