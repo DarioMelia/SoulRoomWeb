@@ -73,6 +73,72 @@ body {
   font-family: "Eurostyle", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  position: relative;
+}
+/*Neon Part*/
+.nav-links a:hover::before {
+  content: "";
+  position: absolute;
+ background-color: var(--primary-color);
+  pointer-events: none;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(2em) rotateX(40deg) scale(1, 0.45);
+  filter: blur(1em);
+  opacity: 0.8;
+  }
+  .nav-links a.rosa:hover::before{
+    content: "";
+    position: absolute;
+   background-color: var(--secondary-color);
+    pointer-events: none;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2em) rotateX(40deg) scale(1, 0.45);
+    filter: blur(1em);
+    opacity: 0.8;
+  }
+
+
+
+.nav-links a.azul:hover{
+  animation: neonAnimAzul 2s alternate-reverse infinite;
+}
+.nav-links a.rosa:hover{
+animation: neonAnimRosa 2s alternate-reverse infinite;
+}
+@keyframes neonAnimAzul {
+  from {
+      text-shadow:
+        0 0 25px var(--primary-color),
+        0 0 55px var(--primary-color),
+        0 0 115px var(--primary-color);
+    }
+    to {
+      text-shadow:
+        0 0 20px var(--primary-color),
+        0 0 35px var(--primary-color),
+        0 0 75px var(--primary-color);
+    }
+    
+}
+@keyframes neonAnimRosa {
+  from {
+      text-shadow:
+        0 0 25px var(--secondary-color),
+        0 0 55px var(--secondary-color),
+        0 0 115px var(--secondary-color);
+    }
+    to {
+      text-shadow:
+        0 0 20px var(--secondary-color),
+        0 0 35px var(--secondary-color),
+        0 0 75px var(--secondary-color);
+    }
 }
 .nav-trigger{
  display: none;
