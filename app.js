@@ -14,7 +14,7 @@ const app = express()
     .use(express.static("public"))//sirve los archivos estáticos de la pagina, guardados en la carpeta "public"
     .use(express.static(__dirname))
 
-
+//Asociamos las rutas importadas al subdominio pertinente
 app.use("/",homeRoutes)
 app.use("/admin",adminRoutes)
 app.use("/store",storeRoutes)
